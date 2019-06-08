@@ -1,11 +1,13 @@
-# \<visually-hidden>
+# @weach/visually-hidden
 
-This web-component follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
+Provides text for screen readers that is visually hidden. It is the logical opposite of the `aria-hidden` attribute.
 
 ## Installation
 
 ```bash
-npm i visually-hidden
+yarn add @weach/visually-hidden
+# or
+npm i @weach/visually-hidden
 ```
 
 ## Usage
@@ -15,13 +17,5 @@ npm i visually-hidden
   import 'visually-hidden/visually-hidden.js';
 </script>
 
-<visually-hidden></visually-hidden>
-```
-
-## Testing using karma (if applied by author)
-
-```bash
-yarn lint && yarn test
-# browserstack
-yarn test:bs
+<visually-hidden>Only a screen reader can see me</visually-hidden>
 ```
