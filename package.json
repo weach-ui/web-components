@@ -1,0 +1,52 @@
+{
+  "name": "@weach/ui",
+  "private": true,
+  "author": "visually-hidden",
+  "license": "MIT",
+  "repository": "weach/ui",
+  "workspaces": [
+    "components/*"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js,.html components/**/src/**",
+    "storybook": "start-storybook -p 9001",
+    "storybook:build": "build-storybook -o _site -s storybook-static",
+    "build": "lerna run build --stream",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:legacy": "karma start --legacy --coverage",
+    "test:legacy:watch": "karma start --legacy --auto-watch=true --single-run=false"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@open-wc/building-rollup": "^0.5.0",
+    "@open-wc/demoing-storybook": "^0.2.3",
+    "@open-wc/eslint-config": "^0.4.5",
+    "@open-wc/testing": "^0.12.6",
+    "@open-wc/testing-karma": "^2.0.4",
+    "@types/storybook__react": "^4.0.2",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.4.0",
+    "lerna": "^3.14.1",
+    "lint-staged": "^8.2.0",
+    "owc-dev-server": "^0.4.3",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.14.4",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "typescript": "^3.5.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

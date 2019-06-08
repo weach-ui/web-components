@@ -1,0 +1,23 @@
+{
+  "name": "@weach/visually-hidden",
+  "version": "0.0.0",
+  "description": "Webcomponent visually-hidden following open-wc recommendations",
+  "author": "visually-hidden",
+  "homepage": "https://github.com/open-wc/open-wc/",
+  "license": "MIT",
+  "repository": "https://github.com/open-wc/open-wc/",
+  "scripts": {
+    "start:demo": "yarn build:demo && owc-dev-server --open demo/dist",
+    "lint": "eslint --ext .js,.html src/**",
+    "storybook": "start-storybook -p 9001 -c ../../.storybook",
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "build:watch": "yarn run build --watch --preserveWatchOutput",
+    "build:demo": "rollup -c rollup.config.js",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false"
+  },
+  "dependencies": {
+    "lit-element": "^2.1.0",
+    "lit-html": "^1.1.0"
+  }
+}
